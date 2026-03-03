@@ -15,19 +15,19 @@
 
 <br><br>
 
-# 1. Overview
+## 1. Overview
 
 > This document explains how advertisers can create a tracking link for ADDirect on the Airbridge dashboard and register it in the ADDirect service to complete the integration.
 
 <br><br>
 
-# 2. Creating a Tracking Link
+## 2. Creating a Tracking Link
 
-## 2.1. Navigating to the Tracking Link Menu
+### 2.1. Navigating to the Tracking Link Menu
 
 After logging into the Airbridge dashboard, click **`트래킹 링크 (Tracking Links) > 트래킹 링크 생성 (Create Tracking Link)`** from the left-side menu.
 
-## 2.2. Selecting the Channel and Configuring Optimization Parameters
+### 2.2. Selecting the Channel and Configuring Optimization Parameters
 
 1. On the tracking link creation page, make sure the **`연동 채널 (Integrated Channel)`** tab is selected at the top.
 2. In the **캠페인 최적화 파라미터 (Campaign Optimization Parameters) > 광고주 (Advertiser)** section, click the `채널 (utm_source) * 필수 (Required)` input field.
@@ -55,9 +55,9 @@ After logging into the Airbridge dashboard, click **`트래킹 링크 (Tracking 
 
 <br><br>
 
-# 3. Verifying and Copying the Tracking Link
+## 3. Verifying and Copying the Tracking Link
 
-## 3.1. Link Creation Complete – Overview of Items
+### 3.1. Link Creation Complete – Overview of Items
 
 When the link is successfully created, you will be redirected to a page displaying the message **`✔ 트래킹 링크 생성을 완료했습니다 (Tracking link creation completed)`**, along with the generated link details and additional information.
 
@@ -76,7 +76,7 @@ The following items can be found on this page:
 
 > The top-right corner provides `+ 추가 생성하기 (Create Another)`, `복제 (Duplicate)`, and `관리하기 (Manage)` buttons for creating additional links and managing existing ones.
 
-## 3.2. Selecting and Copying the CTV Tracking Link
+### 3.2. Selecting and Copying the CTV Tracking Link
 
 For integration with our DSP, you must use the **CTV Tracking Link** instead of the standard tracking link.
 
@@ -94,7 +94,7 @@ https://abr.ge/@[service]/motivintelligence?ad_creative={ads_id}&campaign={campa
 
 <br><br>
 
-# 4. Registering on the ADDirect App Integration Management
+## 4. Registering on the ADDirect App Integration Management
 
 Register the **CTV Tracking Link** copied from the Airbridge dashboard into ADDirect to finalize the integration.
 
@@ -106,3 +106,10 @@ Register the **CTV Tracking Link** copied from the Airbridge dashboard into ADDi
 4. **iOS URL / Android URL**: Enter the app's store URLs for each platform.
 5. **트래커 (Tracker)**: Paste the **CTV Tracking Link** you copied earlier into the **`트래커 (Tracker)`** input field.
 6. Click the **`등록 (Register)`** button to complete the integration.
+
+<br><br>
+
+## 5. References
+
+- [Airbridge - Creating Tracking Links on the Dashboard](https://help.airbridge.io/ko/guides/creating-tracking-links-on-the-dashboard)
+- [ADDirect - App Integration Management Guide](https://addi-1.gitbook.io/guide/part-7./undefined-1)
