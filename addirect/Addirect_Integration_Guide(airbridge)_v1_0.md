@@ -10,6 +10,11 @@
   - [3.1. Link Creation Complete – Overview of Items](#31-link-creation-complete--overview-of-items)
   - [3.2. Selecting and Copying the CTV Tracking Link](#32-selecting-and-copying-the-ctv-tracking-link)
 - [4. Registering on the ADDirect App Integration Management](#4-registering-on-the-addirect-app-integration-management)
+- [5. Configuring Postbacks in Airbridge](#5-configuring-postbacks-in-airbridge)
+  - [5.1. Navigating to the Postback Settings Menu](#51-navigating-to-the-postback-settings-menu)
+  - [5.2. Enabling Postback Sending and Selecting Events](#52-enabling-postback-sending-and-selecting-events)
+  - [5.3. Configuring Event Data and Delivery Rules](#53-configuring-event-data-and-delivery-rules)
+  - [5.4. Applying and Verifying the Postback Settings](#54-applying-and-verifying-the-postback-settings)
 
 ---
 
@@ -109,7 +114,58 @@ Register the **CTV Tracking Link** copied from the Airbridge dashboard into ADDi
 
 <br><br>
 
-## 5. References
+## 5. Configuring Postbacks in Airbridge
 
-- [Airbridge - Creating Tracking Links on the Dashboard](https://help.airbridge.io/ko/guides/creating-tracking-links-on-the-dashboard)
+Once the ADDirect app integration has been registered, configure **postback sending** in Airbridge so that event data can be sent back to ADDirect.
+
+### 5.1. Navigating to the Postback Settings Menu
+
+1. In the Airbridge dashboard, open the detail page of the **`프라핏DSP`** ad channel selected earlier when creating the tracking link.
+2. Select **`Postback > Configuration`** from the top tab menu.
+3. Some ad channels require additional credentials before postback setup. If **`Postback Keys`** or a credential management option appears, register the required information first by following the relevant channel guide.
+
+> 💡 **Note**: Access to postback settings may vary depending on user permissions. In general, Owner and In-house Marketer users can configure them by default, while Agency users need channel data access permission.
+
+### 5.2. Enabling Postback Sending and Selecting Events
+
+1. Turn on the **`Send postbacks`** toggle, then click **`Postback event setup`**.
+2. In the **event selection** step, choose the events you want to send to ADDirect.
+3. Only events that have actually been collected by Airbridge will appear in the list. If a required event is missing, first confirm that the event is being tracked in the app.
+4. Select at least one event, then click **`Next`**.
+
+> ⚠️ **Caution**: If no events are selected, actual postback sending will not start even when the `Send postbacks` toggle is enabled.
+
+### 5.3. Configuring Event Data and Delivery Rules
+
+Configure the **event data** and **delivery rules** for each selected event.
+
+1. In **`Edit event details`**, review the event name that will be sent to the ad channel.
+2. If supported by the channel, decide whether to include **revenue data** for each event.
+3. In **`Edit delivery rule`**, select the options that match your campaign objective.
+4. Click **`Save`** after completing the configuration.
+
+| Item | Recommended setting | Description |
+| --- | --- | --- |
+| Attribution | `Attributed events` | Sends only events attributed to the channel. Suitable for standard performance measurement or settlement purposes. |
+| Attribution | `All events` | Sends all events regardless of attribution. Useful when retargeting optimization requires broader event sharing. |
+| First or All Events | `First events only` | Sends only the first occurrence per device. Suitable for CPI/CPA-oriented operation. |
+| First or All Events | `All events` | Sends repeated events as well. Useful for re-engagement or retargeting optimization. |
+
+> 💡 **Operational tip**: For retargeting-focused campaigns, Airbridge recommends considering **`Attribution = All events`** and **`First or All Events = All events`**.
+
+> ⚠️ **Caution**: Editing the postback URL can directly affect campaign optimization and billing. If URL changes are required, it is recommended to coordinate with the ADDirect team in advance.
+
+### 5.4. Applying and Verifying the Postback Settings
+
+1. After saving all event settings, click **`Apply`**.
+2. Once applied, Airbridge begins sending the selected event postbacks to ADDirect **immediately**.
+3. If you update a postback configuration that is already active, the change is reflected as soon as it is applied.
+4. After the initial setup, verify with the ADDirect side that events are being received as expected.
+
+<br><br>
+
+## 6. References
+
+- [Airbridge - Creating Tracking Links on the Dashboard](https://help.airbridge.io/en/guides/creating-tracking-links-on-the-dashboard)
+- [Airbridge - Postback Settings](https://help.airbridge.io/en/guides/postback-settings-new)
 - [ADDirect - App Integration Management Guide](https://addi-1.gitbook.io/guide/part-7./undefined-1)
