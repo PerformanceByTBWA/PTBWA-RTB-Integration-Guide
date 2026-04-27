@@ -15,6 +15,7 @@
   - [5.2. Enabling Postback Sending and Selecting Events](#52-enabling-postback-sending-and-selecting-events)
   - [5.3. Configuring Event Data and Delivery Rules](#53-configuring-event-data-and-delivery-rules)
   - [5.4. Applying and Verifying the Postback Settings](#54-applying-and-verifying-the-postback-settings)
+- [6. References](#6-references)
 
 ---
 
